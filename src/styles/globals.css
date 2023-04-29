@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@layer {
+  .strokeText {
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+  }
+  .strokeText2 {
+    -webkit-text-stroke: 1px #75707c;
+    text-stroke: 1px #75707c;
+  }
+  .strokeText3 {
+    -webkit-text-stroke: 1px #5084d3;
+    text-stroke: 1px #5084d3;
+  }
+  .strokeText4 {
+    -webkit-text-stroke: 1px #50cbb7;
+    text-stroke: 1px #50cbb7;
+  }
+  .strokeText5 {
+    -webkit-text-stroke: 1px #da4e51;
+    text-stroke: 1px #da4e51;
+  }
+  .strokeText6 {
+    -webkit-text-stroke: 1px #8000ff;
+    text-stroke: 1px #8000ff;
+  }
+  .btn-left,
+  .btn-right {
+    display: none;
+  }
+  .slide_discover:hover .btn-left,
+  .slide_discover:hover .btn-right {
+    display: flex;
+  }
+  .new-music .other-dot {
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .new-music:hover .other-dot {
+    opacity: 1;
+  }
+  .new-music .play {
+    background-color: transparent;
+    opacity: 0;
+  }
+  .new-music:hover .play {
+    background-color: rgb(0 0 0 / 0.4);
+    opacity: 1;
+  }
+  .other-btn {
+    background-color: transparent;
+  }
+  .other-btn:hover {
+    background-color: #423a4b;
+  }
+  .itemImg .img {
+    transition: 0.5s;
+  }
+  .itemImg:hover .img {
+    scale: 1.1;
+  }
+  .itemImg .modal {
+    opacity: 0;
+  }
+  .itemImg:hover .modal {
+    opacity: 1;
+  }
+  .item-song-rating .play {
+    opacity: 0;
+  }
+  .item-song-rating:hover .play {
+    opacity: 1;
+  }
+  .item-song-rating .img-wrapper img {
+    transition-duration: 0.5s;
+  }
+  .item-song-rating .img-wrapper:hover img {
+    scale: 1.1;
+  }
+  .item .appear {
+    opacity: 0;
+  }
+  .item:hover .appear {
+    opacity: 1;
+  }
+  .item .display-hidden {
+    display: block;
+  }
+  .item:hover .display-hidden {
+    display: none;
+  }
+  .item .display-flex {
+    display: none;
+  }
+  .item:hover .display-flex {
+    display: flex;
+  }
+  .item .scale {
+    transition-duration: 0.5s;
+  }
+  .item:hover .scale {
+    scale: 1.1;
+  }
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .color-gradient {
+    background-image: linear-gradient(to right, #fd905b, #c94baa, #5ba8e4);
+  }
+  .item2-wrapper .item2:nth-child(1) {
+    left: -14.5%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(2) {
+    left: 0%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(3) {
+    left: 14.5%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(4) {
+    left: 29%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(5) {
+    left: 43.5%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(6) {
+    left: 58%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(7) {
+    left: 72.5%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(8) {
+    left: 87%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(9) {
+    left: 101.5%;
+    display: block;
+  }
+  .item2-wrapper .item2:nth-child(n + 10) {
+    display: none;
+  }
+  .partner-animation {
+    animation: 5s runAnimation linear infinite;
+  }
+  .partner-animation-re {
+    animation: 5s runAnimationRe linear infinite;
+  }
+  @keyframes runAnimation {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-149 * 8px));
+    }
+  }
+  @keyframes runAnimationRe {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(149 * 8px));
+    }
+  }
+  .truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
